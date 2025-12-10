@@ -1,17 +1,9 @@
 [build]
-  # Specifies that your serverless functions are located in the 'functions' directory.
   functions = "functions"
 
 [[redirects]]
-  # This is the clean URL path you will use in the Meta Webhook configuration.
   from = "/webhook"
-  
-  # This is the actual path to your Netlify Function (webhook.js).
-  # The name here must match your function file name (without the .js extension).
   to = "/.netlify/functions/webhook" 
-  
   status = 200
-  # Ensures Netlify prioritizes this redirect over trying to find a static file,
-  # which helps resolve the 404 error when accessing the clean URL.
-  force = true 
+  force = true
   
