@@ -3,6 +3,12 @@ exports.handler = async (event) => {
 
   // ✅ Verification (GET)
   if (event.httpMethod === "GET") {
+    // 🛑 START DEBUGGING CODE
+    console.log("DEBUG: ACCESS_TOKEN:", process.env.WHATSAPP_ACCESS_TOKEN);
+    console.log("DEBUG: PHONE_ID:", process.env.WHATSAPP_PHONE_ID);
+    // 🛑 END DEBUGGING CODE
+
+    const params = event.queryStringParameters;
     const params = event.queryStringParameters;
 
     if (
